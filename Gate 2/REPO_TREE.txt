@@ -1,0 +1,43 @@
+ceqg_rg_gate2/
+|-- configs/
+|   |-- default.yaml            # ALL physics params, tolerances, scan ranges
+|-- src/
+|   |-- __init__.py
+|   |-- beta_functions/
+|   |   |-- __init__.py          # Public API: beta_system, F_kernel
+|   |   |-- core.py              # beta4, beta6, eta, F-kernel (3 diagram classes)
+|   |   |-- regulators.py        # Litim + exponential threshold functions
+|   |-- flow/
+|   |   |-- __init__.py
+|   |   |-- fixed_point.py       # NGFP finder, stability matrix, critical surface projection
+|   |   |-- integrator.py        # Radau/RK45 UV->IR integration
+|   |   |-- ward_check.py        # Ward ratio monitor + EVE fallback flag
+|   |-- priors/
+|   |   |-- __init__.py
+|   |   |-- log_link.py          # nu_eff(M) computation + c0,c1,c2 fit
+|   |   |-- uncertainty_scan.py  # Joint (UV x regulator x truncation x xi) scan
+|   |-- cosmology/
+|   |   |-- __init__.py
+|   |   |-- prior_table.py       # CSV generator for hiCLASS/EFTCAMB
+|-- tests/
+|   |-- conftest.py              # Shared fixtures: config, ngfp, reference_flow
+|   |-- test_fixed_point.py      # Test 1: literature NGFP within 20%
+|   |-- test_flow_stability.py   # Test 2: real, bounded, 140 e-folds
+|   |-- test_log_link.py         # Test 3: residuals < 10%
+|   |-- test_ward_check.py       # Test 4: W(t) < 0.05
+|   |-- test_prior_tightness.py  # Test 5: sigma_c/c <= 0.30
+|   |-- test_lambda6_scaling.py  # Test 6: M^2 preserved at UV
+|   |-- test_integrator_agreement.py  # Test 7: Radau vs RK45 < 1e-6
+|   |-- test_m2_residual.py      # Test 8: |c2|/|c1| < 0.01
+|-- data/
+|   |-- literature/              # Benedetti et al. reference values
+|   |-- outputs/                 # gate2_prior_table.csv
+|-- notebooks/
+|   |-- 01_flow_visualization.ipynb
+|   |-- 02_prior_analysis.ipynb
+|-- docs/
+|   |-- derivation_F_kernel.tex  # Full derivation of F(lam4,lam6)
+|   |-- gate2_pass_report.md     # Final pass/fail documentation
+|-- run_gate2.py                 # Master runner (all phases)
+|-- requirements.txt
+|-- README.md
