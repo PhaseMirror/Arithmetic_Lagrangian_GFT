@@ -1,1 +1,1 @@
-# Zeta-Comb_Noise_Kernel
+# Arithmetic Lagrangian GFT
