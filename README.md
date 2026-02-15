@@ -1,4 +1,4 @@
-# Arithmetic Lagrangian GFT
+# Arithmetic Langevin GFT
 
 A gated research program to **complete Einstein’s quantum gravity** by connecting discrete quantum geometry to precision cosmology, using Renormalization Group (RG) flows, Langevin stochastic gravity, spin-foam microfoundations, and Group Field Theory (GFT) cumulant flows.
 
