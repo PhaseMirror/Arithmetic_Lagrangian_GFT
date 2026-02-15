@@ -44,9 +44,9 @@ Gate 1 is implemented via **Arithmetic-Langevin GFT (AL-GFT)** as a *Gaussian* m
 
 Gate 1 is being upgraded from “framework specified, derivation in progress” to a fully implemented Gaussian derivation with explicit pass/fail criteria. [file:1]
 
-### Gate 2+ (scaffolding only, not yet passed)
+### Gate 2+ (scaffolding only, not yet started)
 
-- Gate 2 will use AL-GFT-derived UV couplings \(\lambda_4(M_P), \lambda_6(M_P)\) as boundary conditions for a sextic GFT Wetterich flow (Litim regulator, melonic + first non-melonic truncation), producing an RG-derived prior for an IR running parameter. [file:1][file:6]
+- Gate 2 will use AL-GFT-derived UV couplings \(\lambda_4(M_P) = (1.73 \pm 0.24) \times 10^{-3}\), \(\lambda_6(M_P) = (1.08 \pm 0.21) \times 10^{-4}\) as boundary conditions for a sextic GFT Wetterich flow (Litim regulator, melonic + first non-melonic truncation), producing an RG-derived prior for an IR running parameter. [file:1][file:6]
 - Gates 3–5 are defined in the Blueprint but are **not** implemented here yet.
 
 ---
